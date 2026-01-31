@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos Exclusivos - Livros Espíritas Tijuca</title>
+    <meta name="description" content="Produtos exclusivos e personalizados. Artes feitas com amor pela nossa família para dar um toque de espiritualidade à sua vida.">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SN+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff6b35;
+            --primary-light: #ff8c42;
+            --primary-dark: #e55a2b;
+            --secondary: #25D366;
+            --text-dark: #2d3748;
+            --text-light: #718096;
+            --bg-cream: #faf8f5;
+            --bg-white: #ffffff;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.12);
+            --shadow-lg: 0 8px 30px rgba(0,0,0,0.15);
+            --radius-sm: 12px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'SN Pro', sans-serif;
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background-color: var(--bg-cream);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header - Moderno e Atraente */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 60px 0 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            right: -50%;
+            bottom: -50%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 30%, rgba(255,255,255,0.1) 0%, transparent 40%);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(30px, -30px) rotate(2deg); }
+        }
+
+        header .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-content {
+            text-align: center;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .header-badge::before {
+            content: '🖼️';
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .header-subtitle {
+            font-size: 1.25rem;
+            font-weight: 500;
+            opacity: 0.95;
+            margin-bottom: 25px;
+            line-height: 1.6;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .header-location {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            background: rgba(255,255,255,0.15);
+            padding: 10px 20px;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+        }
+
+        @media (max-width: 900px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            .header-subtitle {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Botão WhatsApp Fixo */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37,211,102,0.4);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        .whatsapp-float svg {
+            width: 38px;
+            height: 38px;
+            fill: currentColor;
+        }
+
+        /* Seção Quadrinhos */
+        .quadrinhos {
+            background: var(--bg-white);
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .quadrinhos::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(0,0,0,0.05), transparent);
+        }
+
+        .quadrinhos h2 {
+            font-size: 2.4rem;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .quadrinhos-subtitle {
+            text-align: center;
+            font-size: 1.15rem;
+            color: var(--text-light);
+            margin-bottom: 50px;
+        }
+
+        /* Grid de Quadrinhos */
+        .quadrinhos-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .quadrinho-item {
+            background: var(--bg-white);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .quadrinho-item img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            display: block;
+        }
+
+        @media (max-width: 1100px) {
+            .quadrinhos-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .quadrinhos-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .quadrinho-item img {
+                aspect-ratio: 1;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .quadrinhos-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Botões */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 25px 50px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-whatsapp {
+            background: white;
+            color: var(--primary);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .btn svg {
+            width: 32px;
+            height: 32px;
+            fill: currentColor;
+        }
+
+        /* Seção Voltar - Desktop */
+        .voltar {
+            background: var(--bg-cream);
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .btn-voltar {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            background: var(--text-dark);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn-voltar:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* Botão Voltar Fixo - Mobile (canto inferior esquerdo) */
+        .voltar-float {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .voltar-float {
+                display: flex;
+                position: fixed;
+                bottom: 20px;
+                left: 20px;
+                background: var(--text-dark);
+                color: white;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+                transition: transform 0.3s ease;
+                z-index: 1000;
+            }
+
+            .voltar-float:hover {
+                transform: scale(1.1);
+            }
+
+            .voltar-float svg {
+                width: 28px;
+                height: 28px;
+                fill: currentColor;
+            }
+
+            /* Esconde a seção voltar em mobile */
+            .voltar {
+                display: none;
+            }
+        }
+
+        /* Footer Modernizado */
+        footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 40px 0 30px;
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .footer-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .footer-content p {
+            color: rgba(255,255,255,0.7);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.95rem;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+
+            .whatsapp-float {
+                width: 60px;
+                height: 60px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .whatsapp-float svg {
+                width: 32px;
+                height: 32px;
+            }
+
+            .btn {
+                padding: 18px 30px;
+                font-size: 1.1rem;
+                width: 100%;
+                max-width: 350px;
+            }
+
+            .quadrinhos h2 {
+                font-size: 1.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/5521999781417?text=Olá!%20Vi%20os%20quadrinhos%20no%20site%20e%20gostaria%20de%20mais%20informações." target="_blank" class="whatsapp-float" aria-label="Fale conosco pelo WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/>
+        </svg>
+    </a>
+
+    <!-- Botão Voltar Flutuante - Mobile -->
+    <a href="index.html" class="voltar-float" aria-label="Voltar para página inicial">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+        </svg>
+    </a>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="header-badge">Livros Espíritas Tijuca</div>
+                <h1>Produtos Exclusivos</h1>
+                <p class="header-subtitle">Artes feitas pela nossa família para dar<br>um toque de espiritualidade à sua vida :)</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção Quadrinhos -->
+    <section class="quadrinhos">
+        <div class="container">
+            <h2>Quadrinhos Decorativos</h2>
+            <p class="quadrinhos-subtitle">Peças únicas feitas com carinho para você</p>
+            
+            <div class="quadrinhos-grid">
+                <div class="quadrinho-item">
+                    <img src="quadrinhos/1.png" alt="Produto exclusivo 1" loading="lazy">
+                </div>
+                <div class="quadrinho-item">
+                    <img src="quadrinhos/2.png" alt="Produto exclusivo 2" loading="lazy">
+                </div>
+                <div class="quadrinho-item">
+                    <img src="quadrinhos/3.png" alt="Produto exclusivo 3" loading="lazy">
+                </div>
+                <div class="quadrinho-item">
+                    <img src="quadrinhos/4.png" alt="Produto exclusivo 4" loading="lazy">
+                </div>
+                <div class="quadrinho-item">
+                    <img src="quadrinhos/5.png" alt="Produto exclusivo 5" loading="lazy">
+                </div>
+                <div class="quadrinho-item">
+                    <img src="quadrinhos/6.png" alt="Produto exclusivo 6" loading="lazy">
+                </div>
+                <div class="quadrinho-item">
+                    <img src="quadrinhos/7.png" alt="Produto exclusivo 7" loading="lazy">
+                </div>
+                <div class="quadrinho-item">
+                    <img src="quadrinhos/8.png" alt="Produto exclusivo 8" loading="lazy">
+                </div>
+            </div>
+
+            <p style="text-align: center; font-size: 1.1rem; color: var(--text-light); margin-bottom: 40px;">
+                📐 Quadrinhos 25x25 cm com moldura e vidro — <strong style="color: var(--primary);">R$ 69,90</strong> — perfeitos para presentes 🎁
+            </p>
+
+            <div style="text-align: center;">
+                <a href="https://wa.me/5521999781417?text=Olá!%20Vi%20os%20produtos%20no%20site%20e%20gostaria%20de%20mais%20informações." target="_blank" class="btn btn-whatsapp">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/>
+                    </svg>
+                    Encomendar pelo WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Voltar -->
+    <section class="voltar">
+        <div class="container">
+            <a href="index.html" class="btn-voltar">
+                ← Voltar para a página inicial
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>Livros Espíritas Tijuca</h3>
+                <p>Há mais de 10 anos levando conforto à alma através da literatura espírita.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Livros Espíritas Tijuca. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
