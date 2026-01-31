@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livros Espíritas Tijuca - Sua Livraria no Coração da Tijuca</title>
+    <meta name="description" content="Livraria especializada em livros espíritas na Tijuca, Rio de Janeiro. Obras de Allan Kardec, Chico Xavier, Divaldo Franco. Produtos personalizados exclusivos. Visite-nos no Shopping 344 ou encomende pelo WhatsApp.">
+    <meta property="og:title" content="Livros Espíritas Tijuca - Sua Livraria no Coração da Tijuca">
+    <meta property="og:description" content="Mais de 10 anos levando conforto à alma através da literatura espírita. Livros, produtos exclusivos e atendimento com carinho no Shopping 344.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://livrosespiritastijuca.com.br">
+    <meta property="og:image" content="foto.jpg">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SN+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff6b35;
+            --primary-light: #ff8c42;
+            --primary-dark: #e55a2b;
+            --secondary: #25D366;
+            --text-dark: #2d3748;
+            --text-light: #718096;
+            --bg-cream: #faf8f5;
+            --bg-white: #ffffff;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.12);
+            --shadow-lg: 0 8px 30px rgba(0,0,0,0.15);
+            --radius-sm: 12px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'SN Pro', sans-serif;
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background-color: var(--bg-cream);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header - Moderno e Atraente */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 60px 0 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            right: -50%;
+            bottom: -50%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 30%, rgba(255,255,255,0.1) 0%, transparent 40%);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(30px, -30px) rotate(2deg); }
+        }
+
+        header .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            text-align: left;
+        }
+
+        .header-text {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .header-badge::before {
+            content: '✨';
+        }
+
+        header h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .header-subtitle {
+            font-size: 1.25rem;
+            font-weight: 500;
+            opacity: 0.95;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .header-location {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            background: rgba(255,255,255,0.15);
+            padding: 10px 20px;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            margin-bottom: 30px;
+        }
+
+        .header-photo {
+            position: relative;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .header-photo img {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            border: 4px solid rgba(255,255,255,0.3);
+            transition: var(--transition);
+        }
+
+        .header-photo:hover img {
+            transform: scale(1.02);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+        }
+
+        .header-cta {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .header-cta .btn {
+            background: white;
+            color: var(--primary);
+            font-size: 1.15rem;
+            padding: 18px 36px;
+            box-shadow: var(--shadow-md);
+            width: fit-content;
+        }
+
+        .header-cta .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+            background: var(--bg-white);
+        }
+
+        @media (max-width: 900px) {
+            .header-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 35px;
+            }
+
+            header h1 {
+                font-size: 2.4rem;
+            }
+
+            .header-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .header-photo img {
+                max-width: 350px;
+            }
+
+            .header-cta {
+                align-items: center;
+            }
+
+            .header-cta .btn {
+                width: 100%;
+                max-width: 320px;
+            }
+        }
+
+        /* Barra de Benefícios */
+        .benefits-bar {
+            background: var(--bg-white);
+            padding: 30px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            border-radius: var(--radius-md);
+            transition: var(--transition);
+        }
+
+        .benefit-item:hover {
+            background: var(--bg-cream);
+            transform: translateY(-2px);
+        }
+
+        .benefit-icon {
+            font-size: 2rem;
+            line-height: 1;
+        }
+
+        .benefit-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .benefit-text strong {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .benefit-text span {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        @media (max-width: 768px) {
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .benefit-item {
+                justify-content: center;
+            }
+        }
+
+        /* Botão WhatsApp Fixo */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37,211,102,0.4);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        .whatsapp-float svg {
+            width: 38px;
+            height: 38px;
+            fill: currentColor;
+        }
+
+        /* Seção Principal com CTA */
+        .hero {
+            background: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.2rem;
+            color: #ff6b35;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+
+        /* Botões principais */
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            align-items: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 25px 50px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+            box-shadow: 0 5px 20px rgba(37,211,102,0.4);
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(37,211,102,0.5);
+        }
+
+        .btn-catalogo {
+            background: #ff6b35;
+            color: white;
+            box-shadow: 0 5px 20px rgba(255,107,53,0.4);
+        }
+
+        .btn-catalogo:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255,107,53,0.5);
+        }
+
+        .btn svg {
+            width: 32px;
+            height: 32px;
+            fill: currentColor;
+        }
+
+        /* Seção Sobre a Livraria - Modernizada */
+        .about {
+            background: var(--bg-cream);
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to bottom, var(--bg-white), transparent);
+        }
+
+        .about h2 {
+            font-size: 2.4rem;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .about-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        .about-content {
+            background: var(--bg-white);
+            padding: 50px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .about-content::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 6rem;
+            color: var(--primary);
+            opacity: 0.1;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            line-height: 1.8;
+            text-align: left;
+        }
+
+        .about-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Seção Produtos Personalizados Exclusivos - Modernizada */
+        .exclusivos {
+            background: var(--bg-white);
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .exclusivos::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(0,0,0,0.05), transparent);
+        }
+
+        .exclusivos h2 {
+            font-size: 2.4rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .exclusivos-subtitle {
+            text-align: center;
+            font-size: 1.15rem;
+            color: var(--text-light);
+            margin-bottom: 50px;
+        }
+
+        .exclusivos-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        /* Carrossel Modernizado */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 420px;
+            overflow: hidden;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+
+        .carousel:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-5px);
+        }
+
+        .carousel-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.6s ease-in-out;
+            cursor: pointer;
+        }
+
+        .carousel-slide.active {
+            opacity: 1;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .carousel:hover .carousel-slide.active img {
+            transform: scale(1.05);
+        }
+
+        .carousel-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #fff0e8 0%, #fff8f5 100%);
+            border: 3px dashed var(--primary);
+        }
+
+        .carousel-placeholder .icon {
+            font-size: 4rem;
+            margin-bottom: 15px;
+        }
+
+        .carousel-placeholder p {
+            font-size: 1.2rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #e0e0e0;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .dot:hover {
+            background: var(--primary-light);
+        }
+
+        .dot.active {
+            background: var(--primary);
+            transform: scale(1.2);
+        }
+
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--bg-white);
+            border: none;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.3rem;
+            color: var(--primary);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-nav:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-nav.prev {
+            left: 15px;
+        }
+
+        .carousel-nav.next {
+            right: 15px;
+        }
+
+        /* Texto ao lado do carrossel - Modernizado */
+        .exclusivos-texto {
+            padding: 20px;
+        }
+
+        .exclusivos-texto h3 {
+            font-size: 1.8rem;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .exclusivos-texto p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .produto-destaque {
+            background: linear-gradient(135deg, #fff8f0 0%, #fff5eb 100%);
+            padding: 25px;
+            border-radius: var(--radius-md);
+            margin: 25px 0;
+            border-left: 4px solid var(--primary);
+            transition: var(--transition);
+        }
+
+        .produto-destaque:hover {
+            transform: translateX(5px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .produto-destaque h4 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .exclusivos .btn-whatsapp {
+            margin: 30px auto 0;
+            display: flex;
+        }
+
+        @media (max-width: 900px) {
+            .exclusivos-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .carousel {
+                height: 350px;
+            }
+
+            /* Esconde botão desktop em mobile */
+            .btn-catalogo-desktop {
+                display: none !important;
+            }
+
+            /* Mostra botão mobile */
+            .btn-catalogo-mobile {
+                display: flex !important;
+            }
+        }
+
+        /* Versão Desktop - mostra botão dentro do texto, esconde botão de baixo */
+        @media (min-width: 901px) {
+            .btn-catalogo-desktop {
+                display: flex !important;
+            }
+
+            .btn-catalogo-mobile {
+                display: none !important;
+            }
+        }
+
+        /* Seção Depoimentos - Modernizada */
+        .depoimentos {
+            background: var(--bg-cream);
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .depoimentos::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(0,0,0,0.05), transparent);
+        }
+
+        .depoimentos h2 {
+            font-size: 2.4rem;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .depoimentos-subtitle {
+            text-align: center;
+            font-size: 1.15rem;
+            color: var(--text-light);
+            margin-bottom: 50px;
+        }
+
+        .depoimentos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .depoimento-card {
+            background: var(--bg-white);
+            padding: 35px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .depoimento-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .depoimento-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 25px;
+            font-size: 5rem;
+            color: var(--primary);
+            opacity: 0.1;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .stars {
+            color: #ffc107;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .depoimento-text {
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .depoimento-author {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        /* Seção Livros - Modernizada */
+        .livros {
+            background: var(--bg-white);
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .livros::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(0,0,0,0.05), transparent);
+        }
+
+        .livros h2 {
+            font-size: 2.4rem;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .livros-subtitle {
+            text-align: center;
+            font-size: 1.15rem;
+            color: var(--text-light);
+            margin-bottom: 50px;
+        }
+
+        .livros-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .livro-item {
+            background: var(--bg-white);
+            padding: 35px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .livro-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(255,107,53,0.2);
+        }
+
+        .livro-item h3 {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .livro-item p {
+            color: var(--text-light);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Seção Livros Usados - Modernizada */
+        .livros-usados {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .livros-usados::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            right: -50%;
+            bottom: -50%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 30%, rgba(255,255,255,0.08) 0%, transparent 40%);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .livros-usados h2 {
+            font-size: 2.4rem;
+            color: white;
+            margin-bottom: 10px;
+            text-align: center;
+            font-weight: 800;
+            position: relative;
+            z-index: 1;
+        }
+
+        .livros-usados-subtitle {
+            text-align: center;
+            color: rgba(255,255,255,0.9);
+            font-size: 1.15rem;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .livros-usados-content {
+            background: var(--bg-white);
+            padding: 45px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .livros-usados-content p {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            line-height: 1.8;
+            margin-bottom: 18px;
+        }
+
+        .livros-usados-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .livros-usados-content strong {
+            color: var(--primary);
+        }
+
+        /* Seção Endereço e Horários - Modernizada */
+        .endereco {
+            background: var(--bg-cream);
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .endereco::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(0,0,0,0.05), transparent);
+        }
+
+        .endereco h2 {
+            font-size: 2.4rem;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .endereco-subtitle {
+            text-align: center;
+            font-size: 1.15rem;
+            color: var(--text-light);
+            margin-bottom: 50px;
+        }
+
+        .endereco-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: stretch;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .endereco-foto {
+            background: var(--bg-white);
+            padding: 20px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .endereco-foto:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-3px);
+        }
+
+        .endereco-foto img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+        }
+
+        .endereco-info {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .info-card {
+            background: var(--bg-white);
+            padding: 30px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .info-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateX(5px);
+        }
+
+        .info-card h3 {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-card p {
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        /* Footer Modernizado */
+        footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.7);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .footer-links h4 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .footer-links a {
+            display: block;
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-icon:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.95rem;
+        }
+
+        /* Responsivo */
+        @media (max-width: 900px) {
+            .endereco-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .endereco-info {
+                text-align: center;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+            }
+
+            .footer-social {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+
+            header {
+                padding: 60px 0 50px;
+            }
+
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            .header-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .header-location {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .exclusivos h2,
+            .livros h2,
+            .depoimentos h2,
+            .livros-usados h2,
+            .endereco h2,
+            .about h2 {
+                font-size: 1.9rem;
+            }
+
+            .btn {
+                padding: 18px 30px;
+                font-size: 1.1rem;
+            }
+
+            .about-content,
+            .livros-usados-content {
+                padding: 30px 25px;
+            }
+
+            .carousel {
+                height: 300px;
+            }
+
+            .livro-item,
+            .depoimento-card {
+                padding: 25px;
+            }
+
+            .endereco-foto img {
+                height: 220px;
+            }
+
+            .whatsapp-float {
+                width: 60px;
+                height: 60px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .whatsapp-float svg {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/5521999781417?text=Olá!%20Vi%20o%20site%20e%20gostaria%20de%20mais%20informações." target="_blank" class="whatsapp-float" aria-label="Fale conosco pelo WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/>
+        </svg>
+    </a>
+
+    <!-- Header Moderno -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="header-text">
+                    <div class="header-badge">Há Mais de 10 Anos na Tijuca</div>
+                    <h1>Livros Espíritas Tijuca</h1>
+                    <p class="header-subtitle">No coração da Tijuca, um espaço dedicado à Doutrina Espírita. Aqui você encontra o acervo mais completo de obras de Allan Kardec e Chico Xavier, além de produtos exclusivos feitos com amor.</p>
+                    <div class="header-location">
+                        <span>📍</span>
+                        <span>Rua Conde de Bonfim, 344 - 2º Piso</span>
+                    </div>
+                    <div class="header-cta">
+                        <a href="https://wa.me/5521999781417?text=Olá!%20Vi%20o%20site%20e%20gostaria%20de%20mais%20informações." target="_blank" class="btn">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/>
+                            </svg>
+                            Falar pelo WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="header-photo">
+                    <img src="foto.jpg" alt="Livraria Livros Espíritas Tijuca - Foto da loja" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Barra de Benefícios -->
+    <section class="benefits-bar">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">🏆</div>
+                    <div class="benefit-text">
+                        <strong>10+ Anos</strong>
+                        <span>de experiência</span>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🚚</div>
+                    <div class="benefit-text">
+                        <strong>Entrega Rápida</strong>
+                        <span>RJ e todo Brasil</span>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🎁</div>
+                    <div class="benefit-text">
+                        <strong>Produtos Exclusivos</strong>
+                        <span>Personalizados com amor</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Produtos Personalizados Exclusivos COM CARROSSEL -->
+    <section class="exclusivos" id="produtos">
+        <div class="container">
+            <h2>Produtos Exclusivos - Só Aqui!</h2>
+            <p class="exclusivos-subtitle">Itens personalizados que você não encontra em nenhum outro lugar</p>
+            
+            <div class="exclusivos-content">
+                <!-- LADO ESQUERDO: CARROSSEL DE FOTOS -->
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <!-- Foto 1 -->
+                        <div class="carousel-slide active">
+                            <img src="1.png" alt="Produto personalizado exclusivo 1" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        
+                        <!-- Foto 2 -->
+                        <div class="carousel-slide">
+                            <img src="2.png" alt="Produto personalizado exclusivo 2" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        
+                        <!-- Foto 3 -->
+                        <div class="carousel-slide">
+                            <img src="3.png" alt="Produto personalizado exclusivo 3" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        
+                        <!-- Botões de navegação -->
+                        <button class="carousel-nav prev" onclick="changeSlide(-1)">❮</button>
+                        <button class="carousel-nav next" onclick="changeSlide(1)">❯</button>
+                    </div>
+                    
+                    <!-- Indicadores -->
+                    <div class="carousel-dots">
+                        <span class="dot active" onclick="currentSlide(0)"></span>
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                    </div>
+                    
+                    <p style="text-align: center; margin-top: 20px; color: var(--text-light); font-size: 0.95rem;">
+                        Navegue pelas fotos usando as setas ou pontos acima
+                    </p>
+                </div>
+                
+                <!-- LADO DIREITO: TEXTO -->
+                <div class="exclusivos-texto">
+                    <h3>Feitos com Amor, Só Para Você</h3>
+                    <p>
+                        Nossos produtos personalizados são criados pensando em você. Cada caneca, cada quadrinho, 
+                        cada detalhe é feito com carinho para tornar sua experiência espiritual ainda mais especial.
+                    </p>
+                    
+                    <div class="produto-destaque">
+                        <h4>Aceitamos Encomendas</h4>
+                        <p>Consulte disponibilidade e prazos pelo WhatsApp.</p>
+                        <p style="color: var(--primary); font-weight: 600; margin-top: 8px;">Presentes únicos para datas especiais</p>
+                    </div>
+                    
+                    <!-- Botão do catálogo - versão desktop -->
+                    <a href="catalogo-personalizados.pdf" target="_blank" class="btn btn-catalogo btn-catalogo-desktop" style="margin-top: 25px; width: 100%;">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/>
+                            <path d="M9 12h6v2H9zm0 4h6v2H9zm0-8h3v2H9z"/>
+                        </svg>
+                        Ver Catálogo de Produtos Personalizados
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Botão do catálogo - versão mobile -->
+            <div class="btn-catalogo-mobile" style="display: flex; flex-direction: column; gap: 20px; align-items: center; margin-top: 30px;">
+                <a href="catalogo-personalizados.pdf" target="_blank" class="btn btn-catalogo" style="width: 100%; max-width: 500px;">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/>
+                        <path d="M9 12h6v2H9zm0 4h6v2H9zm0-8h3v2H9z"/>
+                    </svg>
+                    Ver Catálogo de Produtos Personalizados
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Nossa História -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>Um Lar para o Espírito</h2>
+            <p class="about-subtitle">Conheça quem somos e nossa missão</p>
+            <div class="about-content">
+                <p>
+                    Desde 2014, servimos a comunidade espírita da Tijuca com dedicação. Nossa missão é simples: conectar pessoas aos livros certos no momento certo. Seja para começar seus estudos, aprofundar na mediunidade ou presentear alguém especial, temos exatamente o que você precisa.
+                </p>
+                <p>
+                    [ESCREVA AQUI SOBRE A LIVRARIA - Como começou, qual a missão, o que a torna especial, 
+                    valores, experiência no mercado, etc. Sugestão de tom acolhedor: "Há X anos, sonhamos em criar 
+                    um espaço onde as pessoas pudessem encontrar não apenas livros, mas conforto para a alma..."]
+                </p>
+                <p>
+                    [CONTINUE AQUI: Fale sobre o atendimento diferenciado, a seleção cuidadosa dos livros, 
+                    a importância da doutrina espírita na vida de vocês e de seus clientes.]
+                </p>
+                <p>
+                    [FINALIZE: Um convite caloroso para visitar a loja ou entrar em contato. 
+                    Exemplo: "Estamos aqui, de braços abertos, para receber você e sua família."]
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Livros -->
+    <section class="livros" id="livros">
+        <div class="container">
+            <h2>Nosso Acervo de Livros</h2>
+            <p class="livros-subtitle">Tudo que você precisa para sua jornada espiritual</p>
+            <div class="livros-grid">
+                <div class="livro-item">
+                    <h3>Obras Básicas</h3>
+                    <p>Livro dos Espíritos, Livro dos Médiuns, Evangelho Segundo o Espiritismo e toda a coleção de Allan Kardec</p>
+                </div>
+                <div class="livro-item">
+                    <h3>Romances Espíritas</h3>
+                    <p>Histórias inspiradoras de Chico Xavier, Divaldo Franco, Joanna de Ângelis e outros grandes autores</p>
+                </div>
+                <div class="livro-item">
+                    <h3>Mediunidade</h3>
+                    <p>Livros sobre desenvolvimento mediúnico, passe, tratamento espiritual e práticas espirituais</p>
+                </div>
+                <div class="livro-item">
+                    <h3>Infantojuvenil</h3>
+                    <p>Histórias educativas e espirituais para crianças e jovens, com linguagem simples e lições valiosas</p>
+                </div>
+                <div class="livro-item">
+                    <h3>Autoajuda Espírita</h3>
+                    <p>Livros sobre reforma íntima, perdão, prece e superação através da doutrina espírita</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Depoimentos -->
+    <section class="depoimentos">
+        <div class="container">
+            <h2>O Que Nossos Clientes Dizem</h2>
+            <p class="depoimentos-subtitle">Histórias reais de quem já nos visitou</p>
+            
+            <div class="depoimentos-grid">
+                <!-- Depoimento 1 -->
+                <div class="depoimento-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="depoimento-text">
+                        "Ambiente acolhedor e atendimento diferenciado. Encontrei livros que estava procurando há meses. A livraria tem uma energia muito especial."
+                    </p>
+                    <p class="depoimento-author">— Maria S., Tijuca</p>
+                </div>
+                
+                <!-- Depoimento 2 -->
+                <div class="depoimento-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="depoimento-text">
+                        "Adorei os produtos personalizados! A caneca que comprei é linda e única. Já virei cliente fixa, sempre que passo pelo Shopping 344 entro para ver as novidades."
+                    </p>
+                    <p class="depoimento-author">— Ana P., Vila Isabel</p>
+                </div>
+                
+                <!-- Depoimento 3 -->
+                <div class="depoimento-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="depoimento-text">
+                        "Troquei livros que já tinha lido pelo programa de usados e ganhei crédito para comprar novos. Além de economizar, deixei meus livros em boas mãos. Recomendo!"
+                    </p>
+                    <p class="depoimento-author">— Roberto L., Grajaú</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Livros Usados -->
+    <section class="livros-usados">
+        <div class="container">
+            <h2>Programa de Livros Usados</h2>
+            <p class="livros-usados-subtitle">Dê uma nova vida aos seus livros</p>
+            <div class="livros-usados-content">
+                <p>
+                    <strong>Dê uma nova vida aos seus livros!</strong> Traga seus livros espíritas usados em boa condição para nossa livraria e ajude outros leitores a descobrirem essas obras especiais.
+                </p>
+                <p>
+                    <strong>Como funciona:</strong> Ao trazer seus livros, você recebe um cupom de desconto para usar na compra de novos títulos em nossa loja.
+                </p>
+                <p>
+                    <strong>Por que trazer seus livros aqui?</strong><br>
+                    Seus livros encontram novos leitores que os apreciarão. Você economiza na renovação de sua biblioteca e faz parte de uma corrente de bem e conhecimento.
+                </p>
+                <p>
+                    <strong>Aceitamos livros espíritas em bom estado:</strong> obras de Kardec, Chico Xavier, romances espíritas, livros de mediunidade e estudos doutrinários.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Visite Nossa Loja -->
+    <section class="endereco" id="endereco">
+        <div class="container">
+            <h2>Venha Nos Conhecer</h2>
+            <p class="endereco-subtitle">Estamos esperando por você no Shopping 344</p>
+            <div class="endereco-content">
+                <div class="endereco-foto">
+                    <img src="foto.jpg" alt="Fachada da Livraria Livros Espíritas Tijuca">
+                </div>
+                <div class="endereco-info">
+                    <div class="info-card">
+                        <h3>Localização</h3>
+                        <p><strong>Shopping 344 - 2º Piso</strong><br>
+                        Rua Conde de Bonfim, 344<br>
+                        Tijuca, Rio de Janeiro - RJ<br><br>
+                        Fácil acesso: próximo ao metrô Saens Peña<br>
+                        Estacionamento disponível no shopping</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>Entrega</h3>
+                        <p>Enviamos para todo o Brasil via Correios e entregamos no Rio de Janeiro via Uber Flash. Receba seus livros no conforto da sua casa!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Livros Espíritas Tijuca</h3>
+                    <p>Há mais de 10 anos levando conforto à alma através da literatura espírita. Visite-nos no Shopping 344 e descubra um mundo de conhecimento e paz.</p>
+                    <div class="footer-social">
+                        <a href="https://wa.me/5521999781417" target="_blank" class="social-icon" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/livrosespiritastijuca" target="_blank" class="social-icon" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <a href="#about">Nossa História</a>
+                    <a href="#produtos">Produtos Exclusivos</a>
+                    <a href="#livros">Acervo de Livros</a>
+                    <a href="#endereco">Visite-nos</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Contato</h4>
+                    <a href="tel:+5521999781417">(21) 99978-1417</a>
+                    <a href="mailto:contato@livrosespiritastijuca.com.br">contato@livrosespiritastijuca.com.br</a>
+                    <a href="https://wa.me/5521999781417" target="_blank">WhatsApp</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Livros Espíritas Tijuca. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript para o Carrossel -->
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                dots[i].classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                    dots[i].classList.add('active');
+                }
+            });
+            currentIndex = index;
+        }
+
+        function changeSlide(direction) {
+            let newIndex = currentIndex + direction;
+            if (newIndex >= slides.length) newIndex = 0;
+            if (newIndex < 0) newIndex = slides.length - 1;
+            showSlide(newIndex);
+        }
+
+        function currentSlide(index) {
+            showSlide(index);
+        }
+
+        // Auto-play do carrossel (opcional)
+        setInterval(() => {
+            changeSlide(1);
+        }, 5000);
+    </script>
+</body>
+</html>
